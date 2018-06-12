@@ -8,8 +8,8 @@ class Main extends React.Component {
     render() {
         return (
             <section className="main">
-                <Movies />
                 <Navigation />
+                <Movies />
             </section>
         )
     }
