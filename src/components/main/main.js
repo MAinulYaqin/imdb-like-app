@@ -2,7 +2,7 @@ import React from 'react';
 import './main.css'
 // import components
 import Movies from './movies/Movies';
-import Navigation from './navigation/navigation';
+import Navigation from './navigation/Navigation';
 
 class Main extends React.Component {
     render() {

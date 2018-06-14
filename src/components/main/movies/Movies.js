@@ -34,7 +34,7 @@ class Movie extends React.Component {
     render() {
         return (
             <section className="movie">
-                <ul>
+                <ul className="movies">
                     {
                         this.state.movies.map(f => (
                             <MovieListItem e={f} key={f.id} />
