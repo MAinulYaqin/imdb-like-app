@@ -9,9 +9,9 @@ const MOVIES = ['Cars 3', 'Paranoid', 'Just Because!', 'Anything'];
 class Movie extends React.Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
-          movies: []
+            movies: []
         }
     }
 
@@ -21,14 +21,24 @@ class Movie extends React.Component {
             .then(e => e.json())
             .then(e => this.storeMovies(e))
     }
-    
+
     storeMovies(data) {
         const movies = data.results.map(e => {
-            const {vote_count, id, genre_ids, poster_path, title, vote_average, release_date} = e;
-            return {vote_count, id, genre_ids, poster_path, title, vote_average, release_date};
+            const {
+                vote_count,
+                id,
+                genre_ids,
+                poster_path,
+                title,
+                vote_average,
+                release_date
+            } = e;
+            return {vote_count, id, genre_ids, poster_path, title, vote_average, release_date };
         })
 
-        this.setState({movies})
+        this.setState({
+            movies
+        })
     }
 
     render() {
